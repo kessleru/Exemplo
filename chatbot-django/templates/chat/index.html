@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot Django</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Cabeçalho do Chat -->
+        <div class="chat-header">
+            <div class="bot-info">
+                <div class="bot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="bot-details">
+                    <h3>ChatBot Django</h3>
+                    <span class="status online">Online</span>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <button id="exportHistory" class="btn-icon" title="Exportar histórico">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button id="clearChat" class="btn-icon" title="Limpar conversa">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button id="toggleTheme" class="btn-icon" title="Alterar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Área de Mensagens -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Mensagem de boas-vindas -->
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        Olá! Eu sou o ChatBot Django. Como posso ajudar você hoje?
+                        <br><br>
+                        <strong>Funcionalidades:</strong>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Conversas inteligentes</li>
+                            <li>Persistência de dados no banco</li>
+                            <li>Histórico de conversas</li>
+                            <li>Interface responsiva</li>
+                            <li>Administração via Django Admin</li>
+                        </ul>
+                    </div>
+                    <div class="message-time" id="welcomeTime"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicador de digitação -->
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <div class="typing-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="typing-animation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Área de Input -->
+        <div class="chat-input">
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Digite sua mensagem..." 
+                    maxlength="500"
+                    autocomplete="off"
+                >
+                <button id="sendButton" class="send-btn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span class="char-counter" id="charCounter">0/500</span>
+                <span class="powered-by">Powered by Django</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processando...</p>
+        </div>
+    </div>
+
+    <!-- Notifications Container -->
+    <div id="notificationsContainer" class="notifications-container"></div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

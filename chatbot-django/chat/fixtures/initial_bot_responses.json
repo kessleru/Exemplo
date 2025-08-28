@@ -1,0 +1,122 @@
+[
+    {
+        "model": "chat.botresponse",
+        "pk": 1,
+        "fields": {
+            "category": "greeting",
+            "keywords": "oi, olá, hello, ola, bom dia, boa tarde, boa noite, e aí, eae",
+            "response_text": "Olá! Seja bem-vindo ao ChatBot Django! Como posso ajudá-lo hoje?",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 2,
+        "fields": {
+            "category": "greeting",
+            "keywords": "oi, olá, hello",
+            "response_text": "Oi! É um prazer conversar com você. Em que posso ser útil?",
+            "is_active": true,
+            "priority": 2,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 3,
+        "fields": {
+            "category": "farewell",
+            "keywords": "tchau, adeus, bye, até logo, falou, xau, até mais",
+            "response_text": "Tchau! Foi um prazer conversar com você. Volte sempre que precisar de ajuda!",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 4,
+        "fields": {
+            "category": "farewell",
+            "keywords": "tchau, adeus",
+            "response_text": "Até logo! Espero ter ajudado. Tenha um ótimo dia!",
+            "is_active": true,
+            "priority": 2,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 5,
+        "fields": {
+            "category": "help",
+            "keywords": "ajuda, help, socorro, como, auxilio, não sei, não entendo",
+            "response_text": "Estou aqui para ajudar! Posso responder perguntas, conversar sobre diversos assuntos e fornecer informações. O que você gostaria de saber?",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 6,
+        "fields": {
+            "category": "name",
+            "keywords": "nome, quem é você, quem você é, seu nome, como se chama",
+            "response_text": "Eu sou o ChatBot Django! Sou um assistente virtual criado com Django para ajudar e conversar com você.",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 7,
+        "fields": {
+            "category": "time",
+            "keywords": "que horas, horário, hora, tempo agora",
+            "response_text": "Desculpe, não tenho acesso ao horário atual no momento. Você pode verificar o horário no seu dispositivo.",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 8,
+        "fields": {
+            "category": "other",
+            "keywords": "django, python, programação, código, desenvolvimento",
+            "response_text": "Que legal que você tem interesse em Django e Python! Estes são frameworks e linguagens fantásticas para desenvolvimento web. Posso conversar sobre tecnologia com você!",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 9,
+        "fields": {
+            "category": "other",
+            "keywords": "obrigado, obrigada, valeu, thanks, vlw",
+            "response_text": "De nada! Fico feliz em poder ajudar. Se precisar de mais alguma coisa, estarei aqui!",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "chat.botresponse",
+        "pk": 10,
+        "fields": {
+            "category": "other",
+            "keywords": "como você funciona, como funciona, o que você faz",
+            "response_text": "Eu funciono através de um sistema de correspondência de palavras-chave! Quando você digita algo, eu procuro por palavras que reconheço e respondo de acordo. Sou alimentado pelo Django e posso aprender novas respostas através do painel administrativo.",
+            "is_active": true,
+            "priority": 1,
+            "created_at": "2024-01-01T00:00:00Z"
+        }
+    }
+]
